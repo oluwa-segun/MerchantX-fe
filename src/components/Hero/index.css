@@ -1,0 +1,22 @@
+.heroContainer {
+    display: grid;
+    grid-template-columns: 169px 169px 169px;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.heroContainer .img1, .heroContainer .img3 {
+    margin-top: 40px;
+}
+
+.heroContainer .img2 {
+    width: 169px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heroContainer .img2 img:first-child {
+    margin-bottom: 5px;
+}

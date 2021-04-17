@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import LandingPage from './pages/Landingpage';
+
+import { createMuiTheme, MuiThemeProvider, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primay: {
+      main: '#0B08B8'
+    },
+    secondary: {
+      main: '#0C0B5A',
+      dark: '#0E0D2F'
+    },
+    text: {
+      primary: '#1A181B'
+    },
+    typography: {
+      title: {
+        fontFamily: 'Ubuntu',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: '30px',
+        lineHeight: '34px',
+        color: '#C4C4C4'
+      },
+      h3: {
+        fontFamily: 'Ubuntu',
+        fontStyle: 'Normal',
+        fontWeight: 'bold',
+        fontSize: '68px',
+        lineHeight: '68px',
+        color: '#09068C'
+      }
+    }
+  }  
+})
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+        <LandingPage/>
+    </ThemeProvider>
   );
 }
 
